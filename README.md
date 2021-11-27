@@ -12,6 +12,14 @@ You can use this project as a jump start to build something more advanced or as 
 4. Deploy backend to AWS (Lambda)
 5. Automate deployment (Terraform)
 
+## Skills you will practice
+
+- Python, Flask, Jinja templating
+- AWS (S3, Lambda)
+- Terraform
+- Coding and research skills
+- Bootstrap styling
+
 ## Requirements
 
 - Python

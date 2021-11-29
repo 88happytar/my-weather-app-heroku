@@ -40,3 +40,21 @@ Install dependencies
 
 Run flask server
 `flask run`
+
+### Heroku Container Deployment
+
+`docker login`
+
+`docker build . -t app`
+
+`docker image ls`
+
+`docker run --publish 5000:5000 app`
+
+`heroku create my-great-weather` (if name is taken, choose another)
+
+`heroku stack:set container`
+
+`git push heroku master` (after committing your changes to git)
+
+`heroku config:set FLASK_ENV=production` (set environment variables)

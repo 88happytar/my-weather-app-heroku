@@ -1,4 +1,4 @@
-# My Weather App AWS
+# My Weather App Heroku
 
 This project will be built through a series of videos. I hope to help people learn how to build an application locally and shift it to the cloud.
 

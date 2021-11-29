@@ -8,15 +8,16 @@ You can use this project as a jump start to build something more advanced or as 
 
 1. Create flask server with outbound api calls to obtain weather information
 2. Add frontend static content to display weather
-3. Deploy frontend to AWS S3
-4. Deploy backend to AWS (Lambda)
-5. Automate deployment (Terraform)
+3. Create Docker container
+4. Deploy app to Heroku
+5. Continuous deployments with GitHub actions
 
 ## Skills you will practice
 
 - Python, Flask, Jinja templating
-- AWS (S3, Lambda)
-- Terraform
+- Heroku
+- GitHub actions
+- Docker
 - Coding and research skills
 - Bootstrap styling
 
@@ -25,7 +26,8 @@ You can use this project as a jump start to build something more advanced or as 
 - Python
 - Code editor of your choice
 - Virtual environment (optional)
-- Terraform (optional)
+- Docker
+- Heroku CLI
 
 ### Helpful Commands
 
@@ -41,6 +43,9 @@ Install dependencies
 Run flask server
 `flask run`
 
+Create requirements.txt
+`pip freeze > requirements.txt`
+
 ### Heroku Container Deployment
 
 `docker login`
@@ -49,12 +54,17 @@ Run flask server
 
 `docker image ls`
 
-`docker run --publish 5000:5000 app`
+`docker run -p 5000:5000 --env-file .env app`
+
+`heroku login` (to logout, `heroku logout`)
 
 `heroku create my-great-weather` (if name is taken, choose another)
 
-`heroku stack:set container`
+`heroku stack:set container --app my-great-weather`
 
+`heroku config:set FLASK_APP=server --app my-great-weather`
+
+`heroku config:set FLASK_ENV=production --app my-great-weather` (set environment variables)
+
+Manual push to heroku - not required as we use GitHub actions
 `git push heroku master` (after committing your changes to git)
-
-`heroku config:set FLASK_ENV=production` (set environment variables)

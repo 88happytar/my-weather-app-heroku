@@ -1,1 +1,1 @@
-web: gunicorn run:happystar-weather
+web:gunicorn run:happystar-weather
